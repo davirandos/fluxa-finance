@@ -10,5 +10,4 @@ public class ApiApplication {
 		System.out.println("Faz o L");
 		SpringApplication.run(ApiApplication.class, args);
 	}
-
 }

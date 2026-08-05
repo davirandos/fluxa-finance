@@ -33,6 +33,5 @@ build/
 .vscode/
 
 # Configs sensíveis
-application-local.properties
-application-secrets.properties
+*.properties
 .env

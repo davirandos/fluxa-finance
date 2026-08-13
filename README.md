@@ -1,4 +1,6 @@
-# Fluxa Finance
+<div align="Center">
+  <img src="./docs/images/fluxa-logo.png" width="200" height="200">
+</div>
 
 <p align="center">
   Sistema de gestão financeira empresarial desenvolvido com Java e Spring Boot.

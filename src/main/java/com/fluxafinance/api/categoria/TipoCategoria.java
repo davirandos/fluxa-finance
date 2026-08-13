@@ -1,4 +1,6 @@
 package com.fluxafinance.api.categoria;
 
-public class TipoCategoria {
+public enum TipoCategoria {
+    RECEITA,
+    DESPESA
 }

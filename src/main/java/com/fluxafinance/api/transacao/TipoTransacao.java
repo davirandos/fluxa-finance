@@ -1,4 +1,6 @@
 package com.fluxafinance.api.transacao;
 
-public class TipoTransacao {
+public enum TipoTransacao {
+    RECEITA, //entrada
+    DESPESA //saída
 }

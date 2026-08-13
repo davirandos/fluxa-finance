@@ -1,4 +1,7 @@
 package com.fluxafinance.api.repository;
 
-public class Repository {
+import com.fluxafinance.api.test.TestBanco;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Repository extends JpaRepository<Aluno, Long>{
 }

@@ -5,9 +5,9 @@ services:
 
         environment:
             MYSQL_DATABASE: fluxa_finance
-            MYSQL_USER: fluxa
-            MYSQL_PASSWORD: fluxa123
-            MYSQL_ROOT_PASSWORD: root123
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
 
         ports:
             - "3306:3306"

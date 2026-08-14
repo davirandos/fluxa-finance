@@ -44,6 +44,5 @@ public class Transacao {
 
     @Column(nullable = false)
     private LocalDateTime atualizadaEm;
-
 }
 

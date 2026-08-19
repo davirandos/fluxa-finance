@@ -22,4 +22,12 @@ public class Endereco {
     private String cidade;
 
     private String estado;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

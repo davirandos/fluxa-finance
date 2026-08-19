@@ -32,4 +32,12 @@ public class Conta {
 
     @Column(name = "data_criada", nullable = false)
     private LocalDateTime dataCriada;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

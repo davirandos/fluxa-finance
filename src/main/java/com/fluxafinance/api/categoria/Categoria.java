@@ -20,4 +20,8 @@ public class Categoria {
 
     @Column(nullable = false)
     private Boolean ativo = true;
+
+    public Categoria(Long id) {
+        this.id = id;
+    }
 }

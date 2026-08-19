@@ -21,4 +21,12 @@ public class Empresa {
     private boolean ativo;
 
     private LocalDate data_cadastro;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

@@ -1,7 +1,7 @@
 services:
   mysql:
     image: mysql:8.4
-    container_name: fluxa_mysql
+    container_name: backend
 
     environment:
       MYSQL_DATABASE: fluxa_finance

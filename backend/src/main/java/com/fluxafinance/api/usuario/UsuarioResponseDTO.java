@@ -1,49 +1,24 @@
 package com.fluxafinance.api.usuario;
 
-import jakarta.persistence.*;
+public class UsuarioResponseDTO {
 
-// Entity indica para o JPA que esta é uma tabela
-@Entity
-@Table(name = "usuario")
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(unique = true, nullable = false, length = 50)
     private String nome;
-
-    @Column(unique = true, nullable = false, length = 50)
     private String email;
-
-    @Column(nullable = false)
-    private String senha;
-
-    @Column(nullable = false, length = 20)
     private String telefone;
-
-    @Column(nullable = false, length = 50)
     private String enderecoUsuario;
-
-    @Column(nullable = false, length = 50)
     private String empresa;
 
-    public Usuario() {
-
-    }
-
-    public Usuario(String nome, String email, String senha, String telefone, String enderecoUsuario, String empresa) {
+    public UsuarioResponseDTO(String nome, String email, String telefone, String enderecoUsuario, String empresa) {
         this.nome = nome;
         this.email = email;
-        this.senha = senha;
         this.telefone = telefone;
         this.enderecoUsuario = enderecoUsuario;
         this.empresa = empresa;
     }
 
-    public Long getId() {
-        return id;
-    }
+    /* getters */
+    public Long getId() { return id; }
 
     public String getNome() {
         return nome;
@@ -51,10 +26,6 @@ public class Usuario {
 
     public String getEmail() {
         return email;
-    }
-
-    public String getSenha() {
-        return senha;
     }
 
     public String getTelefone() {
@@ -69,16 +40,13 @@ public class Usuario {
         return empresa;
     }
 
+    /* setters */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public void setTelefone(String telefone) {
@@ -92,5 +60,4 @@ public class Usuario {
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
-
 }

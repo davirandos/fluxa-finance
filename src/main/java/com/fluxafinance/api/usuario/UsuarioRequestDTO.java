@@ -1,34 +1,15 @@
 package com.fluxafinance.api.usuario;
 
-import jakarta.persistence.*;
+public class UsuarioRequestDTO {
 
-// Entity indica para o JPA que esta é uma tabela
-@Entity
-@Table(name = "usuario")
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(unique = true, nullable = false, length = 50)
     private String nome;
-
-    @Column(unique = true, nullable = false, length = 50)
     private String email;
-
-    @Column(nullable = false)
     private String senha;
-
-    @Column(nullable = false, length = 20)
     private String telefone;
-
-    @Column(nullable = false, length = 50)
     private String enderecoUsuario;
-
-    @Column(nullable = false, length = 50)
     private String empresa;
 
-    public Usuario(String nome, String email, String senha, String telefone, String enderecoUsuario, String empresa) {
+    public UsuarioRequestDTO(String nome, String email, String senha, String telefone, String enderecoUsuario, String empresa) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
@@ -37,10 +18,7 @@ public class Usuario {
         this.empresa = empresa;
     }
 
-    public Long getId() {
-        return id;
-    }
-
+    /* getters */
     public String getNome() {
         return nome;
     }
@@ -65,6 +43,7 @@ public class Usuario {
         return empresa;
     }
 
+    /* setters */
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -88,5 +67,4 @@ public class Usuario {
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
-
 }

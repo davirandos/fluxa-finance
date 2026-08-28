@@ -1,0 +1,40 @@
+[33mcommit c1c366b66eeba4f44e3a0e424c0435fb03562202[m
+Author: davirandos <lucctyte@gmail.com>
+Date:   Thu Aug 27 15:41:12 2026 -0300
+
+    feat(transacao): implementar service, controller e DTOs iniciais para transações
+    
+    Adiciona TransacaoService, TransacaoController, DTOs (request/response) e comentários explicativos nos arquivos modificados (Conta, Categoria, Transacao).
+    
+    Comentário: separa responsabilidade entre Repository, Service e Controller; lógica de atualização de saldo fica no service em transação atômica.
+    
+    Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
+
+ .../com/fluxafinance/api/categoria/Categoria.java  |   26 [32m+[m
+ .../java/com/fluxafinance/api/conta/Conta.java     |   59 [32m+[m
+ .../com/fluxafinance/api/transacao/Transacao.java  |  115 [32m+[m[31m-[m
+ .../api/transacao/TransacaoController.java         |   88 [32m+[m
+ .../api/transacao/TransacaoRequest.java            |   79 [32m+[m
+ .../api/transacao/TransacaoResponse.java           |  115 [32m+[m
+ .../api/transacao/TransacaoService.java            |   92 [32m+[m[31m-[m
+ frontend/.gitignore                                |   41 [32m+[m
+ frontend/AGENTS.md                                 |    9 [32m+[m
+ frontend/CLAUDE.md                                 |    1 [32m+[m
+ frontend/README.md                                 |   36 [32m+[m
+ frontend/eslint.config.mjs                         |   18 [32m+[m
+ frontend/next.config.ts                            |    8 [32m+[m
+ frontend/package-lock.json                         | 6793 [32m++++++++++++++++++++[m
+ frontend/package.json                              |   27 [32m+[m
+ frontend/postcss.config.mjs                        |    7 [32m+[m
+ frontend/public/file.svg                           |    1 [32m+[m
+ frontend/public/globe.svg                          |    1 [32m+[m
+ frontend/public/next.svg                           |    1 [32m+[m
+ frontend/public/vercel.svg                         |    1 [32m+[m
+ frontend/public/window.svg                         |    1 [32m+[m
+ frontend/src/app/components/Button/Button.tsx      |   15 [32m+[m
+ frontend/src/app/favicon.ico                       |  Bin [31m0[m -> [32m25931[m bytes
+ frontend/src/app/globals.css                       |   26 [32m+[m
+ frontend/src/app/layout.tsx                        |   29 [32m+[m
+ frontend/src/app/page.tsx                          |   17 [32m+[m
+ frontend/tsconfig.json                             |   34 [32m+[m
+ 27 files changed, 7635 insertions(+), 5 deletions(-)

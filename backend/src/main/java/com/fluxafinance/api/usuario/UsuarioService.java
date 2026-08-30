@@ -1,5 +1,7 @@
 package com.fluxafinance.api.usuario;
 
+import org.springframework.stereotype.Service;
+
 @Service
 public class UsuarioService {
     private final UsuarioMapper usuarioMapper;

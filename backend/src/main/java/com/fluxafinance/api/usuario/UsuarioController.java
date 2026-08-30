@@ -1,5 +1,6 @@
 package com.fluxafinance.api.usuario;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public Usuario cadastrarUsuario(@RequestBody Usuario usuario){
-        return usuarioService.cadastrar(usuario);
+    public UsuarioResponseDTO cadastrarUsuario(@Valid @RequestBody UsuarioRequestDTO usuarioRequest){
+        return usuarioService.cadastrar(usuarioRequest);
     }
 }
